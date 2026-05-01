@@ -8,4 +8,4 @@ repository = "https://github.com/praia-lang/praia-zed"
 
 [grammars.praia]
 repository = "https://github.com/praia-lang/tree-sitter-praia"
-rev = "5b00ed2"
+rev = "5b00ed258d3fa7add8a6824278c777e57dc8ac16"
