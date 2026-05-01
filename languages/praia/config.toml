@@ -1,0 +1,7 @@
+name = "Praia"
+grammar = "praia"
+path_suffixes = ["praia"]
+line_comments = ["// "]
+block_comment = ["/* ", " */"]
+tab_size = 4
+hard_tabs = false
