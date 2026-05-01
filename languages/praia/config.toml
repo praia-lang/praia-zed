@@ -1,7 +1,17 @@
 name = "Praia"
 grammar = "praia"
 path_suffixes = ["praia"]
+first_line_pattern = '^#!.*\bpraia\b'
 line_comments = ["// "]
-block_comment = ["/* ", " */"]
+block_comment = ["/*", "*/"]
+autoclose_before = ")}]"
 tab_size = 4
 hard_tabs = false
+brackets = [
+    { start = "{", end = "}", close = true, newline = true },
+    { start = "[", end = "]", close = true, newline = true },
+    { start = "(", end = ")", close = true, newline = true },
+    { start = "\"", end = "\"", close = true, newline = false, not_in = ["string"] },
+    { start = "'", end = "'", close = true, newline = false, not_in = ["string", "comment"] },
+    { start = "/*", end = " */", close = true, newline = false, not_in = ["string", "comment"] },
+]
