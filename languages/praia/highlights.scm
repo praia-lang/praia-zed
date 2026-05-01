@@ -57,10 +57,12 @@
 (function_declaration
   name: (identifier) @function)
 (call_expression
-  (identifier) @function)
+  (primary_expression
+    (identifier) @function))
 (call_expression
-  (member_expression
-    (identifier) @function . ))
+  (primary_expression
+    (member_expression
+      (identifier) @function . )))
 
 ; Parameters
 (parameter
