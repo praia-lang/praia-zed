@@ -76,6 +76,11 @@
 (class_declaration
   superclass: (identifier) @type)
 
+; Built-in concurrency primitives. `Channel` is the deprecated alias
+; for `Queue` — kept here so old code still highlights consistently.
+((identifier) @type.builtin
+ (#match? @type.builtin "^(Lock|Queue|Channel|SharedMap|CancellationToken)$"))
+
 ; Enums
 (enum_declaration
   name: (identifier) @type)
