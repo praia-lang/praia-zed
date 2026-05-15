@@ -81,6 +81,13 @@
 ((identifier) @type.builtin
  (#match? @type.builtin "^(Lock|Queue|Channel|SharedMap|CancellationToken)$"))
 
+; Built-in namespaces — identifiers that resolve to the C++ globals
+; registered in src/interpreter_setup.cpp. Listing them here makes
+; references like `http.get(...)` or `fs.read(...)` highlight as
+; module names rather than plain variables.
+((identifier) @namespace
+ (#match? @namespace "^(base64|bytes|crypto|fmt|fs|http|json|math|net|path|plist|random|secrets|sqlite|sys|time|unicode|url|xml|yaml|zlib)$"))
+
 ; Enums
 (enum_declaration
   name: (identifier) @type)
